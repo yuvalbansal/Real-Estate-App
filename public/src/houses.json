@@ -1,0 +1,52 @@
+[
+  {
+    "location": "Mumbai",
+    "size": "4 BHK",
+    "price": 20200000
+  },
+  {
+    "location": "Bengaluru",
+    "size": "4 BHK",
+    "price": 22100000
+  },
+  {
+    "location": "Gurgaon",
+    "size": "2 BHK",
+    "price": 7300000
+  },
+  {
+    "location": "Gurgaon",
+    "size": "2 BHK",
+    "price": 6100000
+  },
+  {
+    "location": "Delhi",
+    "size": "4 BHK",
+    "price": 20100000
+  },
+  {
+    "location": "Delhi",
+    "size": "3 BHK",
+    "price": 20400000
+  },
+  {
+    "location": "Bengaluru",
+    "size": "3 BHK",
+    "price": 18400000
+  },
+  {
+    "location": "Delhi",
+    "size": "4 BHK",
+    "price": 22700000
+  },
+  {
+    "location": "Bengaluru",
+    "size": "4 BHK",
+    "price": 26000000
+  },
+  {
+    "location": "Delhi",
+    "size": "2 BHK",
+    "price": 7800000
+  }
+]
