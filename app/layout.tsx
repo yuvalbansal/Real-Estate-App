@@ -1,6 +1,6 @@
 'use client';
 import './globals.css';
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
