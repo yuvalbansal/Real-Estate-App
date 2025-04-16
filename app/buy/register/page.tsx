@@ -57,6 +57,7 @@ export default function RegisterAsBuyer() {
 
         {/* Address */}
         <textarea
+          type="address"
           name="address"
           placeholder="Address"
           value={formData.address}

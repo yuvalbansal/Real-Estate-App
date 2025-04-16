@@ -55,7 +55,7 @@ export default function BidForPropertyPage() {
 
       {/* I'm Interested */}
       <div className="bg-white border rounded shadow p-4">
-        <h2 className="text-xl font-semibold mb-2">I'm Interested</h2>
+        <h2 className="text-xl font-semibold mb-2">I am Interested</h2>
         <textarea
           value={interestNote}
           onChange={(e) => setInterestNote(e.target.value)}
