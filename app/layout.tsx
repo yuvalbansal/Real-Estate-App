@@ -1,6 +1,5 @@
 'use client';
 import './globals.css';
-// import type { Metadata } from 'next';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
@@ -29,14 +28,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <nav className="bg-blue-500 text-white px-6 py-3 flex justify-center gap-10 shadow-sm">
           {/* Buy Dropdown */}
           <div className="relative group">
-            <button
-              className={
-                isBuyActive ? 'underline font-semibold' : 'hover:underline'
-              }
-            >
-              <Link href="/buy">Buy</Link>
-            </button>
-            <div className="absolute hidden group-hover:block bg-white text-gray-900 shadow-lg mt-2 rounded min-w-[200px]">
+            <div className="px-4 py-2 cursor-pointer hover:bg-blue-400 rounded">
+              <Link
+                href="/buy"
+                className={`block ${
+                  isBuyActive ? 'underline font-semibold' : ''
+                }`}
+              >
+                Buy
+              </Link>
+            </div>
+            <div className="absolute left-0 bg-white text-gray-900 shadow-lg mt-1 rounded min-w-[200px] z-10 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none">
               <Link
                 href="/buy/property"
                 className={`${linkBase} ${
@@ -82,14 +84,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
           {/* Sell Dropdown */}
           <div className="relative group">
-            <button
-              className={
-                isSellActive ? 'underline font-semibold' : 'hover:underline'
-              }
-            >
-              <Link href="/sell">Sell</Link>
-            </button>
-            <div className="absolute hidden group-hover:block bg-white text-gray-900 shadow-lg mt-2 rounded min-w-[200px]">
+            <div className="px-4 py-2 cursor-pointer hover:bg-blue-400 rounded">
+              <Link
+                href="/sell"
+                className={`block ${
+                  isSellActive ? 'underline font-semibold' : ''
+                }`}
+              >
+                Sell
+              </Link>
+            </div>
+            <div className="absolute left-0 bg-white text-gray-900 shadow-lg mt-1 rounded min-w-[200px] z-10 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none">
               <Link
                 href="/sell/individual"
                 className={`${linkBase} ${

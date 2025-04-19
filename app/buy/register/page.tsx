@@ -16,11 +16,12 @@ export default function RegisterAsBuyer() {
   const propertyOptions = ['1 BHK', '2 BHK', '3 BHK', '4 BHK', 'Plot', 'Villa'];
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
 
-    if (type === 'checkbox') {
+    if (e.target instanceof HTMLInputElement && e.target.type === 'checkbox') {
+      const { checked } = e.target;
       setFormData((prev) => {
         const newTypes = checked
           ? [...prev.propertyTypes, value]
@@ -43,6 +44,7 @@ export default function RegisterAsBuyer() {
       <h1 className="text-2xl font-semibold mb-6 text-center">
         Register as a Buyer
       </h1>
+
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name */}
         <input
@@ -57,7 +59,6 @@ export default function RegisterAsBuyer() {
 
         {/* Address */}
         <textarea
-          type="address"
           name="address"
           placeholder="Address"
           value={formData.address}
@@ -127,28 +128,19 @@ export default function RegisterAsBuyer() {
         <div>
           <label className="font-medium block mb-2">Purpose of Buying:</label>
           <div className="flex gap-4">
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="purpose"
-                value="Investment"
-                checked={formData.purpose === 'Investment'}
-                onChange={handleChange}
-                required
-              />
-              Investment
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="purpose"
-                value="Self use"
-                checked={formData.purpose === 'Self use'}
-                onChange={handleChange}
-                required
-              />
-              Self use
-            </label>
+            {['Investment', 'Self use'].map((purposeOption) => (
+              <label key={purposeOption} className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="purpose"
+                  value={purposeOption}
+                  checked={formData.purpose === purposeOption}
+                  onChange={handleChange}
+                  required
+                />
+                {purposeOption}
+              </label>
+            ))}
           </div>
         </div>
 
