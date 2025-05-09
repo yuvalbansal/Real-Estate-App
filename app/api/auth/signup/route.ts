@@ -2,6 +2,14 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+// const jsonData = {
+//   ID: 347281,
+//   Name: 'Alice Johnson',
+//   Email: 'alice@example.com',
+//   Password: 'securePassword123!',
+//   'Account Type': 'buyer',
+// };
+
 export async function POST(req: Request) {
   try {
     const { name, email, password, accountType } = await req.json();
