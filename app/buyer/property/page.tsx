@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface House {
   location: string;
@@ -65,7 +66,7 @@ export default function PropertyPage() {
           >
             {/* 🖼️ Image section */}
             <div className="w-full md:w-1/3">
-              <img
+              <Image
                 src="/src/house.jpg"
                 alt="Property"
                 className="w-full h-full object-cover"

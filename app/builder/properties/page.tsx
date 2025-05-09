@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 type Property = {
   id: number;
@@ -74,7 +75,7 @@ export default function MyPropertiesPage() {
               key={property.id}
               className="flex flex-col md:flex-row items-start gap-4 bg-white rounded shadow-md p-4"
             >
-              <img
+              <Image
                 src={property.image}
                 alt={property.title}
                 className="w-full md:w-64 h-48 object-cover rounded"
