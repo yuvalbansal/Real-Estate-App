@@ -78,7 +78,15 @@ export default function MyPropertiesPage() {
               <Image
                 src={property.image}
                 alt={property.title}
+                width={256} // md:w-64 = 256px
+                height={192} // h-48 = 192px
                 className="w-full md:w-64 h-48 object-cover rounded"
+                style={{
+                  width: '100%',
+                  maxWidth: '256px',
+                  height: '192px',
+                  objectFit: 'cover',
+                }}
               />
               <div className="flex-1">
                 <h2 className="text-xl font-semibold">{property.title}</h2>

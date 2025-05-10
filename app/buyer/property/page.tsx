@@ -66,10 +66,23 @@ export default function PropertyPage() {
           >
             {/* 🖼️ Image section */}
             <div className="w-full md:w-1/3">
-              <Image
+              {/* <Image
                 src="/src/house.jpg"
                 alt="Property"
                 className="w-full h-full object-cover"
+              /> */}
+              <Image
+                src="/src/house.jpg"
+                alt="Property"
+                width={256} // md:w-64 = 256px
+                height={192} // h-48 = 192px
+                className="w-full md:w-64 h-48 object-cover rounded"
+                style={{
+                  width: '100%',
+                  maxWidth: '256px',
+                  height: '192px',
+                  objectFit: 'cover',
+                }}
               />
             </div>
 

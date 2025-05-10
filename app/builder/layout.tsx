@@ -2,10 +2,45 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ReactNode } from 'react';
+import { useRouter } from 'next/navigation';
+import { ReactNode, useRef, useEffect, useState } from 'react';
+
+interface User {
+  ID: number;
+  Name: string;
+  Email: string;
+  'Account Type': string;
+}
 
 export default function BuilderLayout({ children }: { children: ReactNode }) {
+  const router = useRouter();
   const pathname = usePathname();
+  const [user, setUser] = useState<User | null>(null);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setShowDropdown(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
 
   const isActive = (href: string) => pathname === href;
 
@@ -17,30 +52,77 @@ export default function BuilderLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-white text-gray-900">
         <nav className="bg-blue-500 text-white px-6 py-3 flex justify-center gap-6 shadow-sm">
-          <Link
-            href="/builder/express"
-            className={`${linkBase} ${
-              isActive('/builder/express') ? activeLink : hoverEffect
-            }`}
-          >
-            Express Interest
-          </Link>
-          <Link
-            href="/builder/list"
-            className={`${linkBase} ${
-              isActive('/builder/list') ? activeLink : hoverEffect
-            }`}
-          >
-            List Your Property
-          </Link>
-          <Link
-            href="/builder/properties"
-            className={`${linkBase} ${
-              isActive('/builder/properties') ? activeLink : hoverEffect
-            }`}
-          >
-            My Properties
-          </Link>
+          <div className="flex gap-6">
+            <Link
+              href="/builder/express"
+              className={`${linkBase} ${
+                isActive('/builder/express') ? activeLink : hoverEffect
+              }`}
+            >
+              Express Interest
+            </Link>
+            <Link
+              href="/builder/list"
+              className={`${linkBase} ${
+                isActive('/builder/list') ? activeLink : hoverEffect
+              }`}
+            >
+              List Your Property
+            </Link>
+            <Link
+              href="/builder/properties"
+              className={`${linkBase} ${
+                isActive('/builder/properties') ? activeLink : hoverEffect
+              }`}
+            >
+              My Properties
+            </Link>
+          </div>
+          <div className="relative">
+            <button
+              className="bg-white text-blue-700 px-4 py-2 rounded hover:bg-gray-200"
+              onClick={() => setShowDropdown(!showDropdown)}
+            >
+              Profile
+            </button>
+            {showDropdown && user && (
+              <div
+                ref={dropdownRef}
+                className="absolute right-0 mt-2 w-64 bg-white text-black border rounded shadow-lg z-50 p-4"
+              >
+                <div className="space-y-1">
+                  <p>
+                    <strong>ID:</strong> {user.ID}
+                  </p>
+                  <p>
+                    <strong>Name:</strong> {user.Name}
+                  </p>
+                  <p>
+                    <strong>Email:</strong> {user.Email}
+                  </p>
+                  <p>
+                    <strong>Account Type:</strong>
+                    {user['Account Type'] === 'buyer'
+                      ? ' Buyer'
+                      : user['Account Type'] === 'individual'
+                      ? ' Individual Owner'
+                      : user['Account Type'] === 'builder'
+                      ? ' Builder/Colonizer'
+                      : ''}
+                  </p>
+                </div>
+                <button
+                  onClick={() => {
+                    localStorage.removeItem('user');
+                    router.push('/login');
+                  }}
+                  className="mt-4 w-full bg-red-500 text-white py-2 rounded hover:bg-red-600"
+                >
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
         </nav>
 
         <main className="p-6 max-w-6xl mx-auto">{children}</main>
