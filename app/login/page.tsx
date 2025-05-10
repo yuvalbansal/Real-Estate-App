@@ -38,6 +38,7 @@ export default function LoginPage() {
 
       setSuccess('Logged In');
 
+      localStorage.removeItem('user');
       localStorage.setItem('user', JSON.stringify(data.user));
 
       setTimeout(() => {
