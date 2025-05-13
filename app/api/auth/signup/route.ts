@@ -13,7 +13,7 @@ import path from 'path';
 export async function POST(req: Request) {
   try {
     const { name, email, password, accountType } = await req.json();
-    const filePath = path.join(process.cwd(), 'auth.json');
+    const filePath = path.join(process.cwd(), 'data/buyer-auth.json');
 
     const fileData = fs.existsSync(filePath)
       ? fs.readFileSync(filePath, 'utf-8')

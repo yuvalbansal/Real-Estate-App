@@ -1,52 +1,290 @@
 [
   {
+    "id": 101234,
+    "location": "Bangalore",
+    "size": "4 BHK",
+    "price": 43200000,
+    "auction": "no",
+    "furnished": "Fully Furnished",
+    "land_area_sqft": 2700,
+    "floor": 10,
+    "total_floors": 15,
+    "transaction_type": "Resale",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Ravi Kumar",
+      "phone": "+91-9812345670"
+    },
+    "amenities": ["Gym", "Clubhouse", "Security", "Power Backup"]
+  },
+  {
+    "id": 101235,
+    "location": "Chennai",
+    "size": "3 BHK",
+    "price": 8600000,
+    "auction": "yes",
+    "furnished": "Semi-Furnished",
+    "land_area_sqft": 1400,
+    "floor": 5,
+    "total_floors": 10,
+    "transaction_type": "Fresh",
+    "status": "Awaiting Possession",
+    "owner": {
+      "name": "Divya Sinha",
+      "phone": "+91-9812345671"
+    },
+    "amenities": ["Park", "Security", "Elevator"]
+  },
+  {
+    "id": 101236,
+    "location": "Delhi",
+    "size": "Plot",
+    "price": 12500000,
+    "auction": "no",
+    "furnished": "Unfurnished",
+    "land_area_sqft": 3000,
+    "floor": 0,
+    "total_floors": 0,
+    "transaction_type": "Resale",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Aarav Shah",
+      "phone": "+91-9812345672"
+    },
+    "amenities": ["Security"]
+  },
+  {
+    "id": 101237,
+    "location": "Gurgaon",
+    "size": "Villa",
+    "price": 49500000,
+    "auction": "yes",
+    "furnished": "Fully Furnished",
+    "land_area_sqft": 4500,
+    "floor": 2,
+    "total_floors": 2,
+    "transaction_type": "Fresh",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Kavita Rao",
+      "phone": "+91-9812345673"
+    },
+    "amenities": ["Swimming Pool", "Parking", "Clubhouse"]
+  },
+  {
+    "id": 101238,
+    "location": "Mumbai",
+    "size": "1 BHK",
+    "price": 5200000,
+    "auction": "no",
+    "furnished": "Unfurnished",
+    "land_area_sqft": 600,
+    "floor": 3,
+    "total_floors": 7,
+    "transaction_type": "Fresh",
+    "status": "Awaiting Possession",
+    "owner": {
+      "name": "Meera Joshi",
+      "phone": "+91-9812345674"
+    },
+    "amenities": ["Elevator", "Security"]
+  },
+  {
+    "id": 101239,
+    "location": "Chennai",
+    "size": "2 BHK",
+    "price": 7400000,
+    "auction": "yes",
+    "furnished": "Semi-Furnished",
+    "land_area_sqft": 950,
+    "floor": 6,
+    "total_floors": 9,
+    "transaction_type": "Resale",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Anil Kapoor",
+      "phone": "+91-9812345675"
+    },
+    "amenities": ["Power Backup", "Gym", "Parking"]
+  },
+  {
+    "id": 101240,
+    "location": "Delhi",
+    "size": "3 BHK",
+    "price": 18500000,
+    "auction": "no",
+    "furnished": "Fully Furnished",
+    "land_area_sqft": 1500,
+    "floor": 8,
+    "total_floors": 12,
+    "transaction_type": "Resale",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Seema Malhotra",
+      "phone": "+91-9812345676"
+    },
+    "amenities": ["Clubhouse", "Security", "Elevator"]
+  },
+  {
+    "id": 101241,
+    "location": "Bangalore",
+    "size": "4 BHK",
+    "price": 36000000,
+    "auction": "yes",
+    "furnished": "Semi-Furnished",
+    "land_area_sqft": 2200,
+    "floor": 11,
+    "total_floors": 18,
+    "transaction_type": "Fresh",
+    "status": "Awaiting Possession",
+    "owner": {
+      "name": "Rohit Shetty",
+      "phone": "+91-9812345677"
+    },
+    "amenities": ["Swimming Pool", "Gym", "Parking"]
+  },
+  {
+    "id": 101242,
+    "location": "Gurgaon",
+    "size": "2 BHK",
+    "price": 6900000,
+    "auction": "no",
+    "furnished": "Semi-Furnished",
+    "land_area_sqft": 1100,
+    "floor": 2,
+    "total_floors": 5,
+    "transaction_type": "Resale",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Nisha Verma",
+      "phone": "+91-9812345678"
+    },
+    "amenities": ["Park", "Elevator", "Security"]
+  },
+  {
+    "id": 101243,
+    "location": "Mumbai",
+    "size": "Villa",
+    "price": 50000000,
+    "auction": "yes",
+    "furnished": "Fully Furnished",
+    "land_area_sqft": 4700,
+    "floor": 2,
+    "total_floors": 2,
+    "transaction_type": "Fresh",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Tanvi Iyer",
+      "phone": "+91-9812345679"
+    },
+    "amenities": ["Swimming Pool", "Clubhouse", "Power Backup"]
+  },
+  {
+    "id": 101244,
+    "location": "Chennai",
+    "size": "Plot",
+    "price": 6200000,
+    "auction": "no",
+    "furnished": "Unfurnished",
+    "land_area_sqft": 1200,
+    "floor": 0,
+    "total_floors": 0,
+    "transaction_type": "Resale",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Suresh Narayan",
+      "phone": "+91-9812345680"
+    },
+    "amenities": ["Security"]
+  },
+  {
+    "id": 101245,
+    "location": "Delhi",
+    "size": "1 BHK",
+    "price": 5800000,
+    "auction": "yes",
+    "furnished": "Semi-Furnished",
+    "land_area_sqft": 550,
+    "floor": 4,
+    "total_floors": 6,
+    "transaction_type": "Fresh",
+    "status": "Awaiting Possession",
+    "owner": {
+      "name": "Jaya Mishra",
+      "phone": "+91-9812345681"
+    },
+    "amenities": ["Elevator", "Security"]
+  },
+  {
+    "id": 101246,
+    "location": "Gurgaon",
+    "size": "3 BHK",
+    "price": 14200000,
+    "auction": "no",
+    "furnished": "Fully Furnished",
+    "land_area_sqft": 1650,
+    "floor": 7,
+    "total_floors": 11,
+    "transaction_type": "Resale",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Kunal Yadav",
+      "phone": "+91-9812345682"
+    },
+    "amenities": ["Power Backup", "Parking", "Clubhouse"]
+  },
+  {
+    "id": 101247,
+    "location": "Bangalore",
+    "size": "2 BHK",
+    "price": 9600000,
+    "auction": "yes",
+    "furnished": "Unfurnished",
+    "land_area_sqft": 1250,
+    "floor": 3,
+    "total_floors": 8,
+    "transaction_type": "Fresh",
+    "status": "Awaiting Possession",
+    "owner": {
+      "name": "Ritika Desai",
+      "phone": "+91-9812345683"
+    },
+    "amenities": ["Security", "Park"]
+  },
+  {
+    "id": 101248,
     "location": "Mumbai",
     "size": "4 BHK",
-    "price": 20200000
+    "price": 41500000,
+    "auction": "no",
+    "furnished": "Fully Furnished",
+    "land_area_sqft": 2400,
+    "floor": 14,
+    "total_floors": 20,
+    "transaction_type": "Resale",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Bhavna Mehta",
+      "phone": "+91-9812345684"
+    },
+    "amenities": ["Gym", "Clubhouse", "Parking"]
   },
   {
-    "location": "Bengaluru",
-    "size": "4 BHK",
-    "price": 22100000
-  },
-  {
-    "location": "Gurgaon",
-    "size": "2 BHK",
-    "price": 7300000
-  },
-  {
-    "location": "Gurgaon",
-    "size": "2 BHK",
-    "price": 6100000
-  },
-  {
+    "id": 101249,
     "location": "Delhi",
-    "size": "4 BHK",
-    "price": 20100000
-  },
-  {
-    "location": "Delhi",
-    "size": "3 BHK",
-    "price": 20400000
-  },
-  {
-    "location": "Bengaluru",
-    "size": "3 BHK",
-    "price": 18400000
-  },
-  {
-    "location": "Delhi",
-    "size": "4 BHK",
-    "price": 22700000
-  },
-  {
-    "location": "Bengaluru",
-    "size": "4 BHK",
-    "price": 26000000
-  },
-  {
-    "location": "Delhi",
-    "size": "2 BHK",
-    "price": 7800000
+    "size": "Plot",
+    "price": 9800000,
+    "auction": "yes",
+    "furnished": "Unfurnished",
+    "land_area_sqft": 1850,
+    "floor": 0,
+    "total_floors": 0,
+    "transaction_type": "Fresh",
+    "status": "Ready to Move",
+    "owner": {
+      "name": "Tushar Aggarwal",
+      "phone": "+91-9812345685"
+    },
+    "amenities": ["Security"]
   }
 ]

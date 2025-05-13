@@ -1,6 +1,6 @@
 'use client';
 
-import './globals.css';
+// import './globals.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
@@ -52,56 +52,55 @@ export default function BuyerLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-white text-gray-900">
-        <header className="bg-blue-600 text-white p-6 text-center shadow-md">
+        {/* <header className="bg-blue-600 text-white p-6 text-center shadow-md">
           <h1 className="text-3xl font-bold">
             <Link href="/">Real Estate Hub</Link>
           </h1>
-        </header>
-        <nav className="bg-blue-500 text-white px-6 py-3 flex justify-center gap-6 shadow-sm">
+        </header> */}
+        {/* <nav className="bg-blue-500 text-white px-6 py-3 flex justify-center gap-6 shadow-sm">
           <div className="flex gap-6">
             <Link
-              href="/register-buyer"
+              href="/buyer/register"
               className={`${linkBase} ${
-                isActive('/register-buyer') ? activeLink : hoverEffect
+                isActive('/buyer/register') ? activeLink : hoverEffect
               }`}
             >
-              I am a Buyer
+              Register as a Buyer
             </Link>
             <Link
-              href="/register-seller"
+              href="/buyer/bid"
               className={`${linkBase} ${
-                isActive('/register-seller') ? activeLink : hoverEffect
+                isActive('/buyer/bid') ? activeLink : hoverEffect
               }`}
             >
-              I am a Seller
+              Bid for Property
             </Link>
             <Link
-              href="/property"
+              href="/buyer/property"
               className={`${linkBase} ${
-                isActive('/property') ? activeLink : hoverEffect
+                isActive('/buyer/property') ? activeLink : hoverEffect
               }`}
             >
               Buy Property
             </Link>
             <Link
-              href="/bids"
+              href="/buyer/bids"
               className={`${linkBase} ${
-                isActive('/bids') ? activeLink : hoverEffect
+                isActive('/buyer/bids') ? activeLink : hoverEffect
               }`}
             >
               See Your Bids
             </Link>
             <Link
-              href="/investments"
+              href="/buyer/investments"
               className={`${linkBase} ${
-                isActive('/investments') ? activeLink : hoverEffect
+                isActive('/buyer/investments') ? activeLink : hoverEffect
               }`}
             >
               My Investments
             </Link>
           </div>
 
-          {/* Profile Dropdown */}
           <div className="relative">
             {user ? (
               <>
@@ -153,7 +152,7 @@ export default function BuyerLayout({ children }: { children: ReactNode }) {
               </>
             ) : (
               <>
-                {/* <button
+                <button
                   className="bg-white text-blue-700 px-4 py-2 rounded hover:bg-gray-200"
                   onClick={() => setShowDropdown(!showDropdown)}
                 >
@@ -174,11 +173,11 @@ export default function BuyerLayout({ children }: { children: ReactNode }) {
                       Register
                     </button>
                   </div>
-                )} */}
+                )}
               </>
             )}
           </div>
-        </nav>
+        </nav> */}
 
         <main className="p-6 max-w-6xl mx-auto">{children}</main>
       </body>

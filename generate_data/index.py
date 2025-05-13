@@ -27,7 +27,7 @@ for _ in range(10):
     houses.append(house)
 
 # Save to JSON file
-with open("../public/src/houses.json", "w") as f:
+with open("../data/houses.json", "w") as f:
     json.dump(houses, f, indent=2)
 
 print("Generated and saved 10 random house listings to 'houses.json'")
