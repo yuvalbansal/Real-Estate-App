@@ -1,6 +1,6 @@
-import type { NextConfig } from 'next';
-
 const isProd = process.env.NODE_ENV === 'production';
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -11,4 +11,4 @@ const nextConfig = {
   output: 'export',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
