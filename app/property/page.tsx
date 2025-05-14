@@ -51,14 +51,6 @@ export default function PropertyPage() {
     setShowBudgetDropdown((prev) => !prev);
   };
 
-  const handleBudgetChange = (index: number, value: number) => {
-    const newRange: [number, number] = [...budgetRange];
-    newRange[index] = value;
-    if (newRange[0] <= newRange[1]) {
-      setBudgetRange(newRange);
-    }
-  };
-
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {

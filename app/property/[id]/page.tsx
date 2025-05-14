@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation';
 import houses from '@/../public/src/houses.json';
 import AuctionUI from './AuctionUI';
 
-interface Params {
+type Props = {
   params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export function generateStaticParams() {
@@ -12,7 +13,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default function PropertyDetailPage({ params }: Params) {
+export default function PropertyDetailPage({ params }: Props) {
   const house = houses.find((h) => h.id.toString() === params.id);
 
   if (!house) return notFound();
